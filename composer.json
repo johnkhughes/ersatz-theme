@@ -1,0 +1,16 @@
+{
+    "name": "jkhughes/ersatz-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "John Hughes",
+            "email": "john@castlegateit.co.uk"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "jkhughes\\ErsatzTheme\\": "classes"
+        }
+    }
+}

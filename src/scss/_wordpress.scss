@@ -1,0 +1,48 @@
+.screen-reader-text {
+    @extend .sr-only;
+}
+
+.wp-caption {
+    margin: {
+        top: $spacer;
+        bottom: $spacer;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.wp-caption-text {
+    margin: {
+        top: floor($spacer / 2);
+        bottom: floor($spacer / 2);
+    }
+
+    color: $text-muted;
+    font-size: $font-size-sm;
+    text-align: center;
+}
+
+.alignnone,
+.aligncenter {
+    margin: {
+        top: $spacer;
+        bottom: $spacer;
+    }
+}
+
+// Specificity hack :D
+.alignleft.alignleft {
+    float: left;
+    margin: 0 $spacer $spacer 0;
+    max-width: 50%;
+}
+
+.alignright.alignright {
+    float: right;
+    margin: 0 0 $spacer $spacer;
+    max-width: 50%;
+}
