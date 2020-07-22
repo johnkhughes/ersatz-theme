@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes() ?>>
     <head>
-        <!-- Site build by Castlegate <https://www.castlegateit.co.uk/> -->
-
         <meta charset="<?php bloginfo('charset') ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 

@@ -1,10 +1,12 @@
 {
     "name": "jkhughes/ersatz-theme",
+    "description": "Bootstrap starter theme",
     "license": "MIT",
     "authors": [
         {
             "name": "John Hughes",
-            "email": "john@castlegateit.co.uk"
+            "email": "hello@johnhughesweb.co.uk",
+            "homepage": "https://www.johnhughesweb.co.uk/"
         }
     ],
     "require": {},

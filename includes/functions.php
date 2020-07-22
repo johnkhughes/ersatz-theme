@@ -1,3 +1,5 @@
 <?php
 
-namespace Castlegate\ErsatzTheme;
+declare(strict_types=1);
+
+namespace jkhughes\ErsatzTheme;
