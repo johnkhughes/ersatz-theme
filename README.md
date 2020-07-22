@@ -7,21 +7,6 @@ Basic, interim Bootstrap WordPress theme. Build and watch tasks are separate:
 
 The `dist` directory is entirely managed by Gulp. Image optimization is automatic. Optimized SVG images have unique ID attributes to avoid conflicts when embedded in HTML. Append `#base64` to image URLs in Sass to use data URIs instead of external images.
 
-## Template parts
-
-You can use `set_query_var` to pass variables to template parts. For example:
-
-~~~ php
-set_query_var('foo', 'example value');
-get_template_part('parts/example');
-~~~
-
-Then, in `parts/example.php`:
-
-~~~ php
-$foo = get_query_var('foo');
-~~~
-
 ## Third-party PHP
 
 Install with composer:
