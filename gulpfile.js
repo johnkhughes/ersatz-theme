@@ -27,7 +27,6 @@ const config = {
                 './src/scss/**/*.scss'
             ],
             js: [
-                './node_modules/jquery/dist/jquery.js',
                 './node_modules/bootstrap/dist/js/bootstrap.js',
                 './src/js/**/*.js'
             ]

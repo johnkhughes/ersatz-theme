@@ -2,45 +2,23 @@
 
 add_action('wp_enqueue_scripts', function () {
     $styles = [
-        'ersatz-theme-style' => [
-            'src' => 'dist/css/style.min.css',
-        ],
-
-        // 'example' => [
-        //     'src' => 'https://www.example.com/example.css',
-        //     'deps' => [
-        //         'ersatz-theme-style',
-        //     ]
-        // ],
+        'ersatz-theme-style' => 'dist/css/style.min.css',
     ];
 
+    $deps = [];
+
+    // Theme styles
     foreach ($styles as $handle => $style) {
-        $src = $style['src'] ?? null;
-        $deps = $style['deps'] ?? [];
+        $url = path_join(THEME_URL, $style);
+        $file = path_join(THEME_DIR, $style);
+        $version = is_file($file) ? md5_file($file) : null;
 
-        // No source? Assume WordPress style handle.
-        if (!$src) {
-            wp_enqueue_style($handle);
-
-            continue;
-        }
-
-        // Source has domain? Assume external style.
-        if (!is_null(parse_url($src, PHP_URL_HOST))) {
-            wp_enqueue_style($handle, $src, $deps);
-
-            continue;
-        }
-
-        // Enqueue theme style with version number based on file modified time.
-        $path = '/' . ltrim($src, '/');
-        $url = THEME_URL . $path;
-        $file = THEME_DIR . $path;
-
-        if (!file_exists($file)) {
-            continue;
-        }
-
-        wp_enqueue_style($handle, $url, $deps, filemtime($file));
+        wp_enqueue_style($handle, $url, $deps, $version);
     }
+
+    // WordPress styles
+    // wp_enqueue_style('jquery');
+
+    // External styles
+    // wp_enqueue_style('example', 'https://www.example.com/');
 });
