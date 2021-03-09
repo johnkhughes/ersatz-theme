@@ -1,1 +1,1 @@
-<link rel="icon" href="<?= THEME_URL ?>/dist/images/icon.png">
+<link rel="icon" href="<?= THEME_URL ?>/images/icon.png">

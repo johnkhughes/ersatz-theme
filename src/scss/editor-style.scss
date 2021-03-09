@@ -1,12 +1,10 @@
 // Styles
 
-// Framework and library configuration
-// @import 'bootstrap';
+@import 'functions';
+@import 'variables';
 
-// Framework and library source
 @import 'node_modules/bootstrap/scss/bootstrap';
 
-// Editor styles
 body {
     margin: 1em;
 }
